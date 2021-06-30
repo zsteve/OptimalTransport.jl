@@ -165,6 +165,12 @@ function discretemeasure(
     support::AbstractVector,
     probs::AbstractVector{<:Real}=fill(inv(length(support)), length(support)),
 )
+    if length(support[1]) == 1
+        @warn """if your support is 1D, the correct format should be a vector
+        and not a vector of vector (e.g. `μsupp = [[0],[4.5],[2]]` should be
+        `μsupp = [0, 4.5, 2]`). You may use `reduce(vcat, μsupp)` to
+        flatten your vector of vectors, before passing it to `discretemeasure`."""
+    end
     return FiniteDiscreteMeasure{typeof(support),typeof(probs)}(support, probs)
 end
 
