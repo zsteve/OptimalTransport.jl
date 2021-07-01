@@ -17,7 +17,7 @@ using StatsBase: StatsBase
 
 export SinkhornGibbs, SinkhornStabilized, SinkhornEpsilonScaling
 
-export sinkhorn, sinkhorn2
+export sinkhorn, sinkhorn2, sinkhorn_divergence
 export emd, emd2
 export sinkhorn_stabilized, sinkhorn_stabilized_epsscaling, sinkhorn_barycenter
 export sinkhorn_unbalanced, sinkhorn_unbalanced2
@@ -37,6 +37,7 @@ include("entropic/sinkhorn_stabilized.jl")
 include("entropic/sinkhorn_epsscaling.jl")
 include("entropic/sinkhorn_unbalanced.jl")
 include("entropic/sinkhorn_barycenter.jl")
+include("entropic/sinkhorn_divergence.jl")
 
 include("quadratic.jl")
 

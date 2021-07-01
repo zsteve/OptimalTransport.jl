@@ -22,6 +22,7 @@ squared2wasserstein
 sinkhorn
 sinkhorn2
 sinkhorn_barycenter
+sinkhorn_divergence
 ```
 
 Currently the following variants of the Sinkhorn algorithm are supported:
